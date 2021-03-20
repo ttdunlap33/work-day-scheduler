@@ -1,13 +1,8 @@
-$('.saveBtn').on('click' , function (event) {
+$('.saveBtn').on('click', function (event) {
     var value = $(event.currentTarget).siblings('.description').val();
-    console.log(event)
-    console.log(event.target)
-    console.log($(event.target).siblings())
     var time = $(this).parent().attr('id');
 
     localStorage.setItem(time, value);
-    console.log(time); 
-    console.log(value);
 });
 
 $('#7 .description').val(localStorage.getItem('7'));
@@ -23,3 +18,25 @@ $('#16 .description').val(localStorage.getItem('16'));
 $('#17 .description').val(localStorage.getItem('17'));
 $('#18 .description').val(localStorage.getItem('18'));
 $('#19 .description').val(localStorage.getItem('19'));
+
+$('#currentDay').text(moment().format('dddd') + ", " + moment().format('MMMM Do YYYY'));
+
+function updateHours() {
+    $('.time-block').each(function () {
+        var hour = $(this).attr('id');
+        var currentHour = moment().hour()
+        console.log(currentHour)
+        console.log(hour)
+        if (+hour < currentHour) {
+            $(this).addClass('past');
+
+        } else if (+hour === currentHour) {
+            $(this).addClass('present');
+        } else {
+            $(this).removeClass('present');
+            $(this).addClass('future');
+        }
+    }
+    )
+}
+updateHours();
