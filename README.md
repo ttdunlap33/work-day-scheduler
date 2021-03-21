@@ -10,12 +10,14 @@
     * Grey- Past
     * Red - Present
     * Green - Future
+    * Blue - Save
 * Text can be typed into a timeblock, and saved locally. 
 * Information persists upon refreshing the page.
 
 ## Technologies used
 * HTML
 * CSS
+* Bootstrap
 * JavaScript
 * JQuery
 * Moment.js
