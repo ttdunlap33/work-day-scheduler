@@ -10,7 +10,7 @@
     * Grey- Past
     * Red - Present
     * Green - Future
-* Text can be typed into timeblock, and saved locally. 
+* Text can be typed into a timeblock, and saved locally. 
 * Information persists upon refreshing the page.
 
 ## Technologies used
